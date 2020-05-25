@@ -1,0 +1,13 @@
+service: sls-aws-ws-chat
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  ping:
+    handler: handler.ping
+    events:
+      - http:
+          path: ping
+          method: get

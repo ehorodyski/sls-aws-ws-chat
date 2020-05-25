@@ -4,7 +4,7 @@
   "description": "A sample backend that uses API Gateway to provide WebSockets for real-time chat",
   "main": "app.py",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "venv": "./.scripts/init_venv.sh"
   },
   "author": "Eric Horodyski <eric@horodyski.me>",
   "license": "MIT"

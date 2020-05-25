@@ -17,6 +17,7 @@ var/
 *.egg
 .vscode
 python
+venv/
 
 # Serverless directories
 .serverless
