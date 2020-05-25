@@ -1,0 +1,11 @@
+{
+  "name": "sls-aws-ws-chat",
+  "version": "1.0.0",
+  "description": "A sample backend that uses API Gateway to provide WebSockets for real-time chat",
+  "main": "app.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Horodyski <eric@horodyski.me>",
+  "license": "MIT"
+}
