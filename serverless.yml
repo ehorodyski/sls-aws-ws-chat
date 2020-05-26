@@ -7,6 +7,21 @@ custom:
 provider:
   name: aws
   runtime: python3.8
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - "dynamodb:PutItem"
+        - "dynamodb:Scan"
+        - "dynamodb:GetItem"
+        - "dynamodb:PutItem"
+        - "dynamodb:UpdateItem"
+        - "dynamodb:DeleteItem"
+      Resource:
+        - { "Fn::GetAtt": ["ConnectionsDynamoDBTable", "Arn"] }
+        - { "Fn::GetAtt": ["MessagesDynamoDBTable", "Arn"] }
+  environment:
+    CONNECTIONS_TABLE: ${self:custom.connectionsTableName}
+    MESSAGES_TABLE: ${self:custom.messagesTableName}
 
 functions:
   ping:
