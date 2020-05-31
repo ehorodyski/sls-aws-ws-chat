@@ -3,6 +3,9 @@ service: sls-aws-ws-chat
 custom:
   connectionsTableName: 'sls-aws-ws-chat-${self:provider.stage}_Connections'
   messagesTableName: 'sls-aws-ws-chat-${self:provider.stage}_Messages'
+  pythonRequirements:
+    dockerizePip: true
+    noDeploy: []
 
 provider:
   name: aws
@@ -63,3 +66,6 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 5
           WriteCapacityUnits: 5
+
+plugins:
+  - serverless-python-requirements
